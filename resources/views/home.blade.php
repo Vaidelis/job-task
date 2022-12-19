@@ -12,17 +12,47 @@
 
         </div>
     </body>
+    <div style="float:left">
 <table>
     <thead>
     <th>Expenses/driver</th>
-    <th>Amount</th>
-    <th>Name1</th>
-    <th>Name2</th>
     </thead>
     <tbody>
+    @foreach($data as $k => $v)
+        <tr>
+            <td>{{$k}}</td>
+        </tr>
+    @endforeach
+    <td>Total:</td>
+    </tbody>
+</table>
+    </div>
+    <div style="float:left; width: 49%">
+<table>
+    <thead>
+    <th>Amount</th>
+    <th><?php foreach ($data as $key);echo $key['name1']?></th>
+    <th><?php foreach ($data as $key);echo $key['name2']?></th>
+    </thead>
+       @foreach($data as $key)
+           <tbody>
+           <tr>
+        <td><?php echo $key['key1'] + $key['key2'] ?></td>
+        <td>{{$key['key1']}}</td>
+        <td>{{$key['key2']}}</td>
+    </tr>
+
+    @endforeach
     <tr>
-        <td>SMTH</td>
+        <td><?php $v = 0; foreach ($data as $key){$v = $v + $key['key1'] + $key['key2'];} echo $v ?></td>
+        <td><?php $v = 0; foreach ($data as $key){$v = $v + $key['key1'];} echo $v ?></td>
+        <td><?php $v = 0; foreach ($data as $key){$v = $v + $key['key2'];} echo $v ?></td>
     </tr>
     </tbody>
 </table>
+    </div>
+<table>
+
+</table>
+
 </html>

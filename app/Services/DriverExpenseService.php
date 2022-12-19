@@ -9,7 +9,6 @@ class DriverExpenseService
         $result = [];
 
         // Write your logic here.
-        $totalprice = array_sum($expenses);
         $driver1 = 0; // 1st driver expensis sum
         $driver2 = 0; // 2st driver expensis sum
         for($i = 0; $i < count($expenses); $i++) {
@@ -55,7 +54,6 @@ class DriverExpenseService
 
             }
         }
-        dd($result, $expenses, $totalprice, $driver1, $driver2);
         return $result;
     }
 }
