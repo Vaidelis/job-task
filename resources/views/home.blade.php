@@ -9,7 +9,7 @@
     <body>
         <div>
             <pre>{{ print_r($data, true) }}</pre>
-            dd
+            ddd
         </div>
     </body>
 </html>
