@@ -9,7 +9,23 @@
     <body>
         <div>
             <pre>{{ print_r($data, true) }}</pre>
-            ddd
+
         </div>
     </body>
+<table>
+    <thead>
+    <th>Expenses/driver</th>
+    <th>Amount</th>
+    <th>Name1</th>
+    <th>Name2</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>SMTH</td>
+    </tr>
+    </tbody>
+    @foreach($data as $k)
+        Key: {{ $k->tires }} <br />
+    @endforeach
+</table>
 </html>

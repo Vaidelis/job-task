@@ -1,9 +1,9 @@
 <?php
- 
+
 namespace App\Http\Controllers;
 
 use App\Services\DriverExpenseService;
-  
+
 class HomeController extends Controller
 {
     /**
@@ -26,23 +26,23 @@ class HomeController extends Controller
         $result = [];
 
         $expenseTypes = [
-            'Fuel (EFS)', 
-            'Fuel (Comdata)', 
-            'Insurance (Truck)', 
-            'Insurance (Trailer)', 
-            'Engine oil', 
-            'Tires', 
-            'Truck wash', 
-            'Trailer wash', 
+            'Fuel (EFS)',
+            'Fuel (Comdata)',
+            'Insurance (Truck)',
+            'Insurance (Trailer)',
+            'Engine oil',
+            'Tires',
+            'Truck wash',
+            'Trailer wash',
             'Flight tickets',
         ];
 
         $iterations = rand(1, 9);
 
-        for ($i = 0; $i < $iterations; $i++) 
+        for ($i = 0; $i < $iterations; $i++)
         {
             $expense = $expenseTypes[$i];
-            
+
             $result[$expense] = number_format($this->randomDecimal(1, 5000), 2, '.', '');
         }
 
@@ -53,4 +53,5 @@ class HomeController extends Controller
     {
         return mt_rand($min * 10, $max * 10) / pow(10, $digit);
     }
+
 }
