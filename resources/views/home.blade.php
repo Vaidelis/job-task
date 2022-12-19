@@ -24,8 +24,5 @@
         <td>SMTH</td>
     </tr>
     </tbody>
-    @foreach($data as $k)
-        Key: {{ $k->tires }} <br />
-    @endforeach
 </table>
 </html>
